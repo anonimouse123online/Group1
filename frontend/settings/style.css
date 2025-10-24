@@ -1,0 +1,739 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #9F2121;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.logo span b {
+  color: #0d6efd;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 200px;
+  font-size: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #F6AA1C;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.nav-links .active {
+  color: #F6AA1C;
+  font-weight: bold;
+}
+
+.login-btn a {
+  background: black;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.login-btn a:hover {
+  background: #621708;
+ 
+  transform: scale(1.05);
+}
+
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #fff;
+    flex-direction: column;
+    gap: 15px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .desktop-login {
+    display: none;
+  }
+  .mobile-login {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .mobile-login {
+    display: none;
+  }
+}
+
+/* ---------------- SETTINGS SECTION ---------------- */
+.settings-container {
+  width: 1200px;
+  border-radius: 31px;
+  margin: 20px auto;
+  padding: 20px;
+  /* Removed: height: 624px; max-height: 80vh; overflow-y: auto; */
+}
+.settings-card {
+  background: #fff;
+  border-radius: 1rem;
+  border: 2px solid #9F2121;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+.settings-card h2 {
+  font-size: 50px;
+  color: #000000;
+  margin: 0 15px 1rem 0;
+  text-align: left;
+}
+.settings-card p {
+  color: #000000;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+.settings-card .card-image {
+  width: 84px;
+  height: 82px;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.settings-card-content {
+  flex-grow: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.settings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.settings-text {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #9F2121;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.options-column {
+  flex: 1;
+}
+.theme-options, .layout-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+.theme-option, .layout-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.theme-option input[type="radio"], .layout-option input[type="radio"] {
+  margin: 0;
+}
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+.change-password-btn {
+  background: #9F2121;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 24px;
+}
+.change-password-btn:hover {
+  background: #621708;
+}
+.danger-zone {
+  background: #ffebee;
+  border-left: 4px solid #f44336;
+}
+.danger-zone h2,
+.danger-zone label {
+  color: #9F2121;
+}
+.danger-zone p {
+  color: #9F2121;
+}
+.danger-zone button {
+  background: #9F2121;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 24px;
+}
+.danger-zone button:hover {
+  background: #d32f2f;
+}
+.settings-card label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+input[type="radio" i] {
+    background-color: #9F2121;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+
+/* Profile Customization Styling based on image */
+.profile-customization {
+  background: linear-gradient(to top right, #ffffff, #f0f7ff, #9F2121);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 2px solid #9F2121;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex; /* Make it flex like settings-card for icon alignment */
+  align-items: flex-start;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+.profile-customization .settings-card-content {
+  flex-grow: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.profile-customization h2 {
+  font-size: 50px;
+  color: #000000;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+.profile-customization p {
+  color: #000000;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+.profile-customization .settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+.profile-customization .options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Added gap for better organization */
+  width: 50%;
+}
+.profile-customization .options-column {
+  flex: 1;
+  text-align: left; /* Ensure left alignment */
+  padding-right: 20px; /* Maintain spacing */
+}
+.profile-customization .theme-options, .profile-customization .layout-options {
+  display: flex;
+  gap: 15px; /* Increased gap for organization */
+  margin-top: 11px;
+}
+.profile-customization .theme-option, .profile-customization .layout-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative; /* For custom radio positioning */
+}
+.profile-customization .theme-option input[type="radio"], .profile-customization .layout-option input[type="radio"] {
+  margin: 0;
+  display: none; /* Hide default radio buttons */
+  
+}
+.DisplayName1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.Language1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.profile-customization .theme-option label, .profile-customization .layout-option label {
+  margin-left: 5px;
+  cursor: pointer; /* Make label clickable */
+  display: block;
+  padding: 8px; /* Padding for better touch target */
+}
+.profile-customization .theme-option input[type="radio"] + label::before,
+.profile-customization .layout-option input[type="radio"] + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* Circular shape */
+  border: 1px solid white;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.profile-customization .theme-option input[type="radio"]:checked + label::before,
+.profile-customization .layout-option input[type="radio"]:checked + label::before {
+  border-color: #9F2121;
+  background-color: #9F2121;
+
+}
+/* Specific circle colors for theme options */
+.profile-customization #lightTheme + label::before {
+  background-color: #f0f0f0; /* Light circle */
+  border-color: #ccc;
+}
+.profile-customization #darkTheme + label::before {
+  background-color: #333; /* Dark circle */
+  border-color: #666;
+}
+.profile-customization #autoTheme + label::before {
+  background: linear-gradient(45deg, #f0f0f0 50%, #333 50%); /* Gradient for Auto (half light, half dark) */
+  border-color: #999;
+}
+.profile-customization select {
+  width: 70%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+.profile-customization .toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.profile-customization .toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.profile-customization .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+.profile-customization .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+.profile-customization input:checked + .slider {
+  background-color: #9F2121;
+}
+.profile-customization input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.profile-customization .theme-option label {
+  margin-left: 5px;
+}
+.profile-customization .layout-option label {
+  margin-left: 5px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #9F2121;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+.footer-bottom {
+  margin-top: -30px;
+  background-color: #9F2121;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/* This creates the short centered line */
+.footer-bottom::before {
+  content: "";
+  display: block;
+  width: 1800px;         /* customize the stroke length */
+  height: 2px;          /* stroke thickness */
+  background: white;    /* stroke color */
+  margin: 0 auto 10px;  /* center and add spacing below */
+}
+
+footer .col {
+  flex: 1 1 200px;
+  margin: 10px;
+  color: #FFFFFF;
+  text-align: left; /* centers everything inside */
+}
+footer .colv {
+  flex: 1 1 200px;
+  margin-left: 220px;
+  color: #FFFFFF;
+  text-align: center; /* centers everything inside */
+}
+footer .colv h4{
+  flex: 1 1 200px;
+  margin-left: -179px;
+  color: #FFFFFF;
+  text-align: center; /* centers everything inside */
+}
+
+footer .colv a {
+  display: block;       /* makes links stack under each other */
+  line-height: 1.8;
+  margin: 5px 65px;        /* space between links */
+  color: #FFFFFF;
+  text-align: left;
+  text-decoration: none;
+  position: relative;   /* 🔹 just add this */
+  overflow: hidden;     /* keeps the line tidy */
+}
+
+/* underline animation */
+footer .colv a::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  bottom: 0;
+  left: -100%;              /* hide left */
+  background-color: #ffffff;
+  transition: left 0.3s ease;
+}
+
+footer .colv a:hover::after {
+  left: 0;                  /* slide in */
+}
+
+/* active link fix */
+footer .colv a.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer .cols {
+  margin-left: 30px;
+  color: #FFFFFF;
+  text-align: left; 
+}
+footer h4 {
+  text-align: left;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  font-size: 27px;
+  }
+footer p {
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+footer input {
+  padding: 8px;
+  width: 50%;
+  border: none;
+  border-radius: 15px;
+  margin-right: 5px;
+  margin-left: 30px;
+}
+footer button {
+  padding: 8px 12px;
+  border: none;
+  background: #F6AA1C;
+  color: white;
+  border: 4px solid #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+footer .social-icons {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+footer .social-icons a {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+.social-icons a img {
+  width: 35px;               /* adjust size */
+  height: 35px;
+  border-radius: 50%;        
+  background: #9F2121;       /* optional background color */
+  padding: 5px;              /* space inside the circle */
+  object-fit: cover;         /* keeps the image proportional */
+  transition: 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);     /* hover zoom */
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 768px) {
+  .settings-container {
+    width: 90%;
+    /* Removed height: auto to maintain consistency with desktop */
+  }
+  .settings-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .settings-card .card-image {
+    margin-bottom: 1rem;
+  }
+  .settings-card-content {
+    text-align: center;
+  }
+  .options-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .options-column {
+    margin-bottom: 1rem;
+  }
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #fff;
+    flex-direction: column;
+    gap: 15px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .desktop-login {
+    display: none;
+  }
+  .mobile-login {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .mobile-login {
+    display: none;
+  }
+}
+
+.card-image {
+  width: 82px;
+  height: 84px;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+  object-fit: cover; /* Ensures image scales correctly within dimensions */
+}
+
+.profile-customization {
+  background: linear-gradient(to top right, #ffffff, #f0f7ff, #9F2121);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 2px solid #9F2121;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+.logo_icon {
+  width: 366px;
+  height: 366px;
+  opacity: 0.15;
+  order: 2; /* Moves logo_icon to the right side in flex layout */
+  margin-left: auto; /* Pushes logo_icon to the far right */
+}
+
+.logo_icon img {
+  width: 83%;
+    height: 83%;
+    object-fit: cover;
+    margin-top: 27px;
+
+}
+
+.profile-customization .card-image {
+  order: 0; /* Ensures profile image stays on the left */
+}
+
+.profile-customization .settings-card-content {
+  order: 1; /* Places content between profile image and logo_icon */
+  flex-grow: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}

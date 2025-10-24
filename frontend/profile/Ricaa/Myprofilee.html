@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDU Enroll - Student Profile</title>
+    <link rel="stylesheet" href="Myprofile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="bsitlogo.png" alt="Edu Enroll Logo" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="/frontend/landingpage/index.html">Home</a>
+            <a href="/frontend/contactus/contactus.html">Contact us</a>
+            <a href="/frontend/profile/Ricaa/Myprofilee.html" class="active">Profile</a>
+            <a href="/frontend/settings/CorSettings.html">Settings</a>
+        </div>
+        <div class="login-btn desktop-login">
+            <a href="#logout">Log out</a>
+        </div>
+        <div class="hamburger">☰</div>
+        <div class="nav-links mobile-login">
+            <a href="#logout">Log out</a>
+        </div>
+    </nav>
+    <div class="profile">
+        <div class="profile-logo">
+            <img src="bsitlogo.png" alt="BSIT Logo">
+        </div>
+        <div class="profile-content">
+            <div class="profile-avatar">
+                <img src="pfp (2).png" alt="Burnok">
+            </div>
+            <div class="profile-info">
+                <h1>Burnok</h1>
+                <p>Information Technology Student</p>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <aside class="sidebar">
+            <a href="#personal" class="sidebar-item" onclick="showSection('personal')">
+                <div class="sidebar-icon">
+                    <img src="pfp.png" alt="Personal Icon">
+                </div>
+                <span>Personal Information</span>
+            </a>
+            <a href="#education" class="sidebar-item active" onclick="showSection('education')">
+                <div class="sidebar-icon">
+                    <img src="toga.png" alt="Education Icon">
+                </div>
+                <span>Educational Background</span>
+            </a>
+            <a href="#enrollments" class="sidebar-item" onclick="showSection('enrollments')">
+                <div class="sidebar-icon">
+                    <img src="current.png" alt="Enrollments Icon">
+                </div>
+                <span>Current Enrollments</span>
+            </a>
+            <a href="#completed" class="sidebar-item" onclick="showSection('completed')">
+                <div class="sidebar-icon">
+                    <img src="completed.png" alt="Completed Icon">
+                </div>
+                <span>Completed Courses</span>
+            </a>
+        </aside>
+        <section class="content-section" id="personal-section" style="display: none; text-align: left;">
+            <h2 class="section-title">Personal Information</h2>
+            <form id="personal-info-form" style="text-align: left;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 8px;">First Name</label>
+                        <input type="text" value="Burnok" style="width: 100%; padding: 12px; border: 1px solid #621708; border-radius: 8px; font-size: 14px;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 8px;">Last Name</label>
+                        <input type="text" value="Burnok" style="width: 100%; padding: 12px; border: 1px solid #621708; border-radius: 8px; font-size: 14px;">
+                    </div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 8px;">Email Address</label>
+                    <input type="email" value="Burnok@gmail.com" style="width: 100%; padding: 12px; border: 1px solid #621708; border-radius: 8px; font-size: 14px;">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 8px;">Phone Number</label>
+                        <input type="text" value="123456789" style="width: 100%; padding: 12px; border: 1px solid #621708; border-radius: 8px; font-size: 14px;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 8px;">Date of Birth</label>
+                        <input type="text" value="15/09/1999" style="width: 100%; padding: 12px; border: 1px solid #621708; border-radius: 8px; font-size: 14px;">
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 8px;">City</label>
+                        <input type="text" value="Cebu City" style="width: 100%; padding: 12px; border: 1px solid #621708; border-radius: 8px; font-size: 14px;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 8px;">Country</label>
+                        <input type="text" value="Philippines" style="width: 100%; padding: 12px; border: 1px solid #621708; border-radius: 8px; font-size: 14px;">
+                    </div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 14px; font-weight: 500; color: #333; margin-bottom: 8px;">Bio</label>
+                    <textarea rows="4" style="width: 100%; padding: 12px; border: 1px solid #621708; border-radius: 8px; font-size: 14px; resize: vertical; font-family: inherit;">BurnokBurnokBurnokBurnokBurnokBurnok</textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" style="background-color: #9F2121; color: white; padding: 12px 24px; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; transition: background-color 0.3s;">Save Changes</button>
+                </div>
+            </form>
+        </section>
+        <section class="content-section" id="education-section" style="text-align: left;">
+            <h2 class="section-title">Educational Background</h2>
+            <div class="education-card">
+                <h3 class="education-title">Bachelor of Science in Information Technology</h3>
+                <div class="education-school">Cebu Technological University</div>
+                <div class="education-details">2023 - Present</div>
+                <div class="education-details">GPA: TBA</div>
+                <div class="tags">
+                    <span class="tag prog">Programming</span>
+                    <span class="tag net">Networking</span>
+                    <span class="tag data-structures">Data Structures</span>
+                </div>
+            </div>
+            <div class="education-card">
+                <h3 class="education-title">High School Diploma</h3>
+                <div class="education-school">Argao National High School</div>
+                <div class="education-details">2017 - 2021</div>
+                <div class="education-details">GPA: 4.0/4.0, Valedictorian</div>
+                <div class="tags">
+                    <span class="tag math">Mathematics</span>
+                    <span class="tag physics">Physics</span>
+                    <span class="tag data">Data Structure</span>
+                </div>
+            </div>
+        </section>
+        <section class="content-section" id="enrollments-section" style="display: none; text-align: left;">
+            <h2 class="section-title">Current Enrollments</h2>
+            <div class="enrollment-card">
+                <div class="course-info">
+                    <h3>Database Management Systems</h3>
+                    <p>PC 318</p>
+                </div>
+            </div>
+            <div class="enrollment-card">
+                <div class="course-info">
+                    <h3>Applications Development And Emerging Technologies</h3>
+                    <p>CC 316</p>
+                </div>
+            </div>
+            <div class="enrollment-card">
+                <div class="course-info">
+                    <h3>Networking 2</h3>
+                    <p>PC 316L</p>
+                </div>
+            </div>
+            <div class="enrollment-card">
+                <div class="course-info">
+                    <h3>System Intergration and Architecture 1</h3>
+                    <p>PC 316</p>
+                </div>
+            </div>
+        </section>
+        <section class="content-section" id="completed-section" style="display: none; text-align: left;">
+            <h2 style="font-size: 22px; font-weight: 700; color: #000; margin-bottom: 20px;">Completed Courses</h2>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+                    <thead>
+                        <tr style="text-align: left; border-bottom: 2px solid #bdbdbd;">
+                            <th style="padding: 10px 12px; font-weight: 600; color: #000;">Course</th>
+                            <th style="padding: 10px 12px; font-weight: 600; color: #000;">Code</th>
+                            <th style="padding: 10px 12px; font-weight: 600; color: #000;">Semester</th>
+                            <th style="padding: 10px 12px; font-weight: 600; color: #000;">Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px 12px; font-weight: 600; color: #000;">Computer Programming 2</td>
+                            <td style="padding: 12px 12px; color: #000;">CC 123</td>
+                            <td style="padding: 12px 12px; color: #000;">1st Semester<br>(A.Y. 2024–2025)</td>
+                            <td style="padding: 12px 12px; color: #000;">1.5</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px 12px; font-weight: 600; color: #000;">Computer Programming 2</td>
+                            <td style="padding: 12px 12px; color: #000;">CC 123L</td>
+                            <td style="padding: 12px 12px; color: #000;">1st Semester<br>(A.Y. 2024–2025)</td>
+                            <td style="padding: 12px 12px; color: #000;">1.4</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #ddd;">
+                            <td style="padding: 12px 12px; font-weight: 600; color: #000;">Digital Logic Design</td>
+                            <td style="padding: 12px 12px; color: #000;">AP2</td>
+                            <td style="padding: 12px 12px; color: #000;">1st Semester<br>(A.Y. 2024–2025)</td>
+                            <td style="padding: 12px 12px; color: #000;">1.6</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px 12px; font-weight: 600; color: #000;">Information Management (LEC)</td>
+                            <td style="padding: 12px 12px; color: #000;">CC225</td>
+                            <td style="padding: 12px 12px; color: #000;">1st Semester<br>(A.Y. 2024–2025)</td>
+                            <td style="padding: 12px 12px; color: #000;">1.5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="content-section" id="settings-section" style="display: none;">
+            <div style="background: white; border-radius: 15px; padding: 24px; margin-bottom: 18px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #000; margin-bottom: 20px;">Account Security</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0;">
+                    <div>
+                        <div style="font-weight: 600; color: #000; margin-bottom: 4px;">Password</div>
+                        <div style="font-size: 13px; color: #666;">Last updated 3 months ago</div>
+                    </div>
+                    <button onclick="changePassword()" style="background: #0066ff; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 500;">Change Password</button>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0;">
+                    <div>
+                        <div style="font-weight: 600; color: #000; margin-bottom: 4px;">Two-Factor Authentication</div>
+                        <div style="font-size: 13px; color: #666;">Add an extra layer of security to your account</div>
+                    </div>
+                    <label style="position: relative; display: inline-block; width: 50px; height: 26px;">
+                        <input type="checkbox" id="two-factor-toggle" onchange="toggleTwoFactor()" style="opacity: 0; width: 0; height: 0;">
+                        <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 26px;"></span>
+                        <span style="position: absolute; content: ''; height: 20px; width: 20px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+                    </label>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 600; color: #000; margin-bottom: 4px;">Login Notifications</div>
+                        <div style="font-size: 13px; color: #666;">Get notified when someone logs into your account</div>
+                    </div>
+                    <label style="position: relative; display: inline-block; width: 50px; height: 26px;">
+                        <input type="checkbox" id="login-notif-toggle" checked onchange="toggleLoginNotifications()" style="opacity: 0; width: 0; height: 0;">
+                        <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #0066ff; transition: .4s; border-radius: 26px;"></span>
+                        <span style="position: absolute; content: ''; height: 20px; width: 20px; right: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+                    </label>
+                </div>
+            </div>
+            <div style="background: white; border-radius: 15px; padding: 24px; margin-bottom: 18px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #000; margin-bottom: 20px;">Notification Preferences</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0;">
+                    <div>
+                        <div style="font-weight: 600; color: #000; margin-bottom: 4px;">Course Updates</div>
+                        <div style="font-size: 13px; color: #666;">Notifications about course announcements and updates</div>
+                    </div>
+                    <label style="position: relative; display: inline-block; width: 50px; height: 26px;">
+                        <input type="checkbox" id="course-updates-toggle" checked onchange="toggleCourseUpdates()" style="opacity: 0; width: 0; height: 0;">
+                        <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #0066ff; transition: .4s; border-radius: 26px;"></span>
+                        <span style="position: absolute; content: ''; height: 20px; width: 20px; right: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+                    </label>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0;">
+                    <div>
+                        <div style="font-weight: 600; color: #000; margin-bottom: 4px;">Assignment Reminders</div>
+                        <div style="font-size: 13px; color: #666;">Reminders about incoming assignment deadlines</div>
+                    </div>
+                    <label style="position: relative; display: inline-block; width: 50px; height: 26px;">
+                        <input type="checkbox" id="assignment-reminders-toggle" checked onchange="toggleAssignmentReminders()" style="opacity: 0; width: 0; height: 0;">
+                        <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #0066ff; transition: .4s; border-radius: 26px;"></span>
+                        <span style="position: absolute; content: ''; height: 20px; width: 20px; right: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+                    </label>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 600; color: #000; margin-bottom: 4px;">Grade Notifications</div>
+                        <div style="font-size: 13px; color: #666;">Notifications when new grades are posted</div>
+                    </div>
+                    <label style="position: relative; display: inline-block; width: 50px; height: 26px;">
+                        <input type="checkbox" id="grade-notif-toggle" checked onchange="toggleGradeNotifications()" style="opacity: 0; width: 0; height: 0;">
+                        <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #0066ff; transition: .4s; border-radius: 26px;"></span>
+                        <span style="position: absolute; content: ''; height: 20px; width: 20px; right: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+                    </label>
+                </div>
+            </div>
+            <div style="background: white; border-radius: 15px; padding: 24px; margin-bottom: 18px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #000; margin-bottom: 20px;">Privacy Settings</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0;">
+                    <div>
+                        <div style="font-weight: 600; color: #000; margin-bottom: 4px;">Profile Visibility</div>
+                        <div style="font-size: 13px; color: #666;">Allow other students to view your profile</div>
+                    </div>
+                    <label style="position: relative; display: inline-block; width: 50px; height: 26px;">
+                        <input type="checkbox" id="profile-visibility-toggle" checked onchange="toggleProfileVisibility()" style="opacity: 0; width: 0; height: 0;">
+                        <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #0066ff; transition: .4s; border-radius: 26px;"></span>
+                        <span style="position: absolute; content: ''; height: 20px; width: 20px; right: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+                    </label>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 600; color: #000; margin-bottom: 4px;">Course Progress Sharing</div>
+                        <div style="font-size: 13px; color: #666;">Share your course progress with instructors</div>
+                    </div>
+                    <label style="position: relative; display: inline-block; width: 50px; height: 26px;">
+                        <input type="checkbox" id="progress-sharing-toggle" checked onchange="toggleProgressSharing()" style="opacity: 0; width: 0; height: 0;">
+                        <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #0066ff; transition: .4s; border-radius: 26px;"></span>
+                        <span style="position: absolute; content: ''; height: 20px; width: 20px; right: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+                    </label>
+                </div>
+            </div>
+            <div style="background: #ffe0e0; border-radius: 15px; padding: 24px; box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #c62828; margin-bottom: 12px;">Danger Zone</h3>
+                <p style="font-size: 14px; color: #d32f2f; margin-bottom: 16px;">Once you delete your account, there is no going back. Please be certain.</p>
+                <button onclick="deleteAccount()" style="background: #f44336; color: white; border: none; padding: 10px 24px; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600;">Delete Account</button>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="col">
+            <h4>EDU Enroll</h4>
+            <p>Empowering students with a feature-rich platform for seamless data management, ensuring easy access to student and teacher information.</p>
+            <div class="social-icons">
+                <a href="#facebook" onclick="openSocial('facebook')"><img src="fb.png" alt="Facebook"></a>
+                <a href="#instagram" onclick="openSocial('instagram')"><img src="insta.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="colv">
+            <h4>Support</h4>
+            <a href="#help" onclick="openSupport('help')">Help Center</a>
+            <a href="#student" onclick="openSupport('student')">Student Portal</a>
+            <a href="#privacy" onclick="openSupport('privacy')">Privacy Policy</a>
+            <a href="#terms" onclick="openSupport('terms')">Terms of Service</a>
+        </div>
+        <div class="cols">
+            <h4>Newsletter</h4>
+            <p>Stay updated with the latest news and information delivered to your inbox.</p>
+            <div>
+                <input type="email" id="newsletter-email" placeholder="Enter your email">
+                <button onclick="subscribe()">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            2025 Bachelor of Science in Information Technology. All rights reserved.
+        </div>
+    </footer>
+    <script src="Myprofile.js"></script>
+</body>
+</html>

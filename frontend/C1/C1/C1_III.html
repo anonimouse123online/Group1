@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSIT Enrollment Dashboard</title>
+  <link rel="stylesheet" href="Style_III.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+
+   
+    <header>
+      <div class="logo-area">
+        <img src="566521804_2129005164255529_7991133854757858233_n.png" alt="BSIT Logo" class="logo" />
+        <h2>BSIT</h2>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="#" class="active">Home</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+        </div>
+        <a href="#" class="logout">Log out</a>
+      </nav>
+    </header>
+
+    
+    <section class="summary">
+      <h1>
+        <span class="highlight">1,010</span>
+        <span class="summary-text">Total students enrolled</span>
+      </h1>
+      <img src="566521804_2129005164255529_7991133854757858233_n.png" alt="Mini Logo" class="mini-logo" />
+    </section>
+
+   
+    <section class="cards">
+      <div class="card yellow">
+        <h2>200</h2>
+        <hr />
+        <p>New Students Enrolled</p>
+      </div>
+      <div class="card blue">
+        <h2>404</h2>
+        <hr />
+        <p>Total Male Enrolled</p>
+      </div>
+      <div class="card purple">
+        <h2>606</h2>
+        <hr />
+        <p>Total Female Enrolled</p>
+      </div>
+    </section>
+
+    
+    <section class="charts">
+      <div class="chart-box">
+        <h3>Enrolled Students by Year & Section and Gender</h3>
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Gender Distribution of Enrolled Students</h3>
+        <canvas id="pieChart"></canvas>
+      </div>
+    </section>
+
+    
+    <section class="students">
+      <div class="student-header">
+        <div class="student-title">
+          <h3>Students List</h3>
+          <select>
+            <option>Select Year & Section to view</option>
+            <option>1A</option><option>1B</option>
+            <option>2A</option><option>2B</option>
+            <option>3A</option><option>3B</option>
+            <option>4A</option><option>4B</option>
+          </select>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Year & Section</th>
+            <th>Email</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>John Nicoleden Francisco</td><td>3A</td><td>francisconicole068@gmail.com</td><td>Dalaguete, Cebu</td></tr>
+          <tr><td>Rona Mae Gesim</td><td>3A</td><td>runamigesim@gmail.com</td><td>Dalaguete, Cebu</td></tr>
+          <tr><td>Justine Shene Cariman</td><td>3A</td><td>carimanjustine10@gmail.com</td><td>Dalaguete, Cebu</td></tr>
+          <tr><td>Dominic Magalso</td><td>3A</td><td>nicmagalso17@gmail.com</td><td>Oslob, Cebu</td></tr>
+          <tr><td>Novin Durf Aguilar</td><td>3A</td><td>novindurf06@gmail.com</td><td>Sibonga, Cebu</td></tr>
+          <tr><td>Vexze Semilla</td><td>3A</td><td>goateehype@gmail.com</td><td>Argao, Cebu</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h4>Bachelor of Science in Information Technology</h4>
+          <p>Empowering students worldwide with accessible, quality education through innovative enrollment solutions.</p>
+          <div class="social-icons">
+            <a href="#"><img src="facebook-24.ico" alt="Facebook" /></a>
+            <a href="#"><img src="Instagram.png" alt="Instagram" /></a>
+          </div>
+        </div>
+
+        <div class="footer-center">
+          <h4>Support</h4>
+          <ul>
+            <li>Help Center</li>
+            <li>Student Portal</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <h4>Newsletter</h4>
+          <p>Stay updated with our latest BSIT programs and announcements.</p>
+          <div class="newsletter">
+            <input type="email" placeholder="Enter your email" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2025 Bachelor of Science in Information Technology. All rights reserved.</p>
+    </footer>
+  </div>
+
+  
+  <script>
+    const barCtx = document.getElementById("barChart").getContext("2d");
+
+    const gradFemale = barCtx.createLinearGradient(0, 0, 0, 400);
+    gradFemale.addColorStop(0, "#b06ba0");
+    gradFemale.addColorStop(1, "#90326C");
+
+    const gradMale = barCtx.createLinearGradient(0, 0, 0, 400);
+    gradMale.addColorStop(0, "#4a80d3");
+    gradMale.addColorStop(1, "#235789");
+
+    new Chart(barCtx, {
+      type: "bar",
+      data: {
+        labels: ["1A","1B","2A","2B","3A","3B","4A","4B"],
+        datasets: [
+          { label: "Male", data: [30,25,25,20,18,15,13,10], backgroundColor: gradMale },
+          { label: "Female", data: [40,35,30,25,20,18,15,12], backgroundColor: gradFemale }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: "top", labels: { boxWidth: 15 } }
+        },
+        scales: {
+          x: { stacked: true },
+          y: { stacked: true, beginAtZero: true }
+        }
+      }
+    });
+
+    const pieCtx = document.getElementById("pieChart").getContext("2d");
+    new Chart(pieCtx, {
+      type: "pie",
+      data: {
+        labels: ["Female 60%", "Male 40%"],
+        datasets: [{ data: [60, 40], backgroundColor: ["#90326C", "#235789"] }]
+      },
+      options: { plugins: { legend: { position: "right" } } }
+    });
+  </script>
+</body>
+</html>

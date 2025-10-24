@@ -1,0 +1,608 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #9F2121;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.logo span b {
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 125px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #F6AA1C;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.nav-links .active {
+  color: #F6AA1C;
+  font-weight: bold;
+}
+
+.login-btn a {
+  background: #220901;
+  color: #FFEDED;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.login-btn a:hover {
+  background: #F6AA1C;
+  box-shadow: 0 0 10px #F6AA1C;
+  transform: scale(1.05);
+}
+
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #fff;
+    flex-direction: column;
+    gap: 15px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .desktop-login {
+    display: none;
+  }
+  .mobile-login {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .mobile-login {
+    display: none;
+  }
+}
+
+
+
+/* ---------------- SPLIT SECTION (Banner + Bento) ---------------- */
+.split-section {
+  
+  display: grid;
+  grid-template-columns: 40% 60%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  left: -80px;
+  position: relative;
+}
+.banner-half {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.welcome {
+  text-align: left;
+  font-size: 60px;
+  font-weight: 800;
+}
+.banner-half h1 {
+  text-align: left;
+  font-size: 60px;
+  font-weight: 800;
+  color: #9F2121;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.banner-half p {
+  text-align: left;
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+.banner-half img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.banner-half .cta-button {
+  display: inline-block;
+  padding: 1.2rem 5rem;
+  background: #220901;
+  color: white;
+  margin-left: -120px;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  letter-spacing: 2.5px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 3px solid #F6AA1C;
+}
+.banner-half .cta-button:hover {
+  background: #621708;
+  box-shadow: 0 0 10px #621708;
+  transform: scale(1.05);
+}
+.banner-half .learnmore-button {
+  display: inline-block;
+  padding: 0.75rem 1.70rem;
+  background: white;
+  color: #0059FF;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+  transition: 0.3s;
+  border: 3px solid #0059FF;
+}
+.banner-half .learnmore-button:hover {
+  transform: scale(1.05);
+}
+
+.bento-half {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for variation */
+  grid-auto-rows: 200px; /* consistent height */
+  gap: 1rem;
+
+}
+
+.bento-card {
+  overflow: hidden;
+  border-radius: 20px; /* default rounding */
+}
+
+.bento-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+/* Specific unique rounded shapes like your example */
+.bento-card:nth-child(1) {
+  grid-column: span 2;
+  border-radius: 90px 0 0 0;
+  width: 313.73px;
+  height: 285px;
+  position: relative;
+  right: 10px;
+  top: 8px;
+}
+
+.bento-card:nth-child(2) {
+  border-radius: 0 120px 50px 50px;
+  width: 244px;
+  height: 330px;
+  position: relative;
+  right: 250px;
+  top: 45px;
+}
+
+.bento-card:nth-child(3) {
+  border-radius: 50px;
+  width: 313.73px;
+  height: 285px;
+  position: relative;
+  right: 10px;
+  top: 90px;
+}
+
+.bento-card:nth-child(4) {
+  border-radius: 50px;
+  width: 244px;
+  height: 200px;
+  position: relative;
+  left: 8px;
+  top: 175px;
+}
+
+.bento-card:nth-child(5) {
+  border-radius: 0 90px 110px  0;
+  width: 234px;
+  height: 350px;
+  position: relative;
+  left: 30px;
+  top: -45px;
+}
+
+/* ---------------- FOUR-PART BANNER SECTION ---------------- */
+.four-part-banner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 95%;
+  height: 100px;
+  max-width: 1500px;
+  padding: 0 0.2rem;
+  background: #0059FF;
+  border-radius: 1rem;
+  position: relative;
+  margin-top: 80px;
+  left: 40px;
+}
+.banner-part {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner-part h3 {
+  font-size: 1.8rem;
+  color: white;
+
+}
+.banner-part p {
+  color: white;
+}
+.banner-part .card-button {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: white;
+  color: #0059FF;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  width: 310px;
+  transition: 0.3s;
+  text-align: left;
+}
+.banner-part .card-button:hover {
+  background: #e6f0ff;
+}
+
+/* ---------------- FEATURE BANNER SECTION ---------------- */
+.feature-banner {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 650px;
+  margin: 2.5rem auto;
+  padding: 0 0.5rem;
+}
+.feature-item {
+  text-align: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 45%;
+  border: 3.5px solid #621708;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.697);
+  transition: transform 0.3s ease;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.feature-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #9F2121;
+  margin: 1rem auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-item h3 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  color: black;
+  
+}
+.feature-item p {
+  margin-bottom: 35px;
+  color: black;
+  font-size: 0.9rem;
+}
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+
+
+/* ---------------- TEAM SECTION ---------------- */
+.team-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.team-section h2 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+.team-section p {
+  font-size: 1.2rem;
+  color: black;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1500px;
+  margin: 2rem auto 0;
+  padding: 0 4rem;
+}
+.team-member {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  min-height: 350px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.team-member h4 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+.team-member p {
+  color: black;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #9F2121;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+.footer-bottom {
+  margin-top: -30px;
+  background-color: #9F2121;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/* This creates the short centered line */
+.footer-bottom::before {
+  content: "";
+  display: block;
+  width: 1400px;         /* customize the stroke length */
+  height: 2px;          /* stroke thickness */
+  background: white;    /* stroke color */
+  margin: 0 auto 10px;  /* center and add spacing below */
+}
+
+footer .col {
+  flex: 1 1 200px;
+  margin: 10px;
+  color: #FFFFFF;
+  text-align: center; /* centers everything inside */
+}
+footer .colv {
+  flex: 1 1 200px;
+  margin-left: 220px;
+  color: #FFFFFF;
+  text-align: center; /* centers everything inside */
+}
+footer .colv h4{
+  flex: 1 1 200px;
+  margin-left: -310px;
+  color: #FFFFFF;
+  text-align: center; /* centers everything inside */
+}
+
+footer .colv a {
+  display: block;       /* makes links stack under each other */
+  line-height: 1.8;
+  margin: 5px 0;        /* space between links */
+  color: #FFFFFF;
+  text-align: left;
+  text-decoration: none;
+  position: relative;   /* 🔹 just add this */
+  overflow: hidden;     /* keeps the line tidy */
+}
+
+/* underline animation */
+footer .colv a::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  bottom: 0;
+  left: -100%;              /* hide left */
+  background-color: #ffffff;
+  transition: left 0.3s ease;
+}
+
+footer .colv a:hover::after {
+  left: 0;                  /* slide in */
+}
+
+/* active link fix */
+footer .colv a.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer .cols {
+  margin-left: 25px;
+  color: #FFFFFF;
+  text-align: left; 
+}
+footer h4 {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 27px;
+  }
+footer p {
+  margin-bottom: 10px;
+  margin-left: -170px;
+}
+footer input {
+  padding: 8px;
+  width: 70%;
+  border: none;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+footer button {
+  padding: 8px 12px;
+  border: none;
+  background: #F6AA1C;
+  color: white;
+  border: 4px solid #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+footer .social-icons {
+  margin-left: -200px;
+  margin-top: 10px;
+}
+footer .social-icons a {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+.social-icons a img {
+  width: 35px;
+  border-radius: 50%; 
+  background-color: white;            
+  object-fit: cover;       
+  transition: 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);     /* hover zoom */
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 768px) {
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+  .banner-half h1 {
+    font-size: 2rem;
+  }
+  .banner-half p {
+    font-size: 1rem;
+  }
+  .bento-half {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-banner {
+    grid-template-columns: 1fr;
+  }
+  .four-part-banner {
+    grid-template-columns: 1fr;
+  }
+  .popular-programs {
+    grid-template-columns: 1fr;
+  }
+  .auth-container {
+    grid-template-columns: 1fr;
+    background: #fff;
+  }
+  .login-page .auth-container {
+    background: url("login.jpeg") no-repeat center center/cover;
+  }
+  .register-page .auth-container {
+    background: url("register.jpeg") no-repeat center center/cover;
+  }
+  .auth-image {
+    display: none;
+  }
+  .auth-form {
+    background: #fff;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}

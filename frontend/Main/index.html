@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduEnroll - Auth</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="C:\Users\jessel bustamante\Documents\Main\logo\bsit.png" alt="Logo">
+        <span><b>BSIT</b> </span>
+      </div>
+      
+      <!-- Navigation links (no login in desktop menu) -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <!-- Only for mobile -->
+        <li><a href="#" class="mobile-login auth-toggle">Login / Sign Up</a></li>
+      </ul>
+
+      <!-- Hamburger for mobile -->
+      <div class="hamburger" id="hamburger">☰</div>
+
+      <!-- Desktop login button -->
+      <div class="login-btn desktop-login">
+        <a href="#" class="auth-toggle">Login/Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Auth Section -->
+  <section id="authSection" class="auth-section">
+    <div class="auth-container">
+      <!-- Image Frame -->
+      <div class="auth-image"></div>
+
+      <!-- Form Container -->
+      <div class="auth-form">
+        <!-- Tabs -->
+        <div class="auth-tabs">
+          <button id="loginBtn" class="tab-btn active">Login</button>
+          <button id="registerBtn" class="tab-btn">Register</button>
+        </div>
+
+        <!-- Form Content -->
+        <div id="formContent"></div>
+
+        <!-- Divider -->
+        <div class="auth-divider">
+          <span>or continue with</span>
+        </div>
+
+        <!-- Social Login -->
+        <div class="social-login">
+  <button class="social-btn google">
+    <i class="fab fa-google"></i>
+  </button>
+  <button class="social-btn facebook">
+    <i class="fab fa-facebook-f"></i>
+  </button>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="col">
+      <h4>EDU ENROLL</h4>
+      <p>Empowering students worldwide with accessible quality education through innovative enrollment solutions.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="col">
+      <h4>Support</h4>
+      <p>Help center</p>
+      <p>Student Portal</p>
+      <p>Policy Privacy</p>
+      <p>Terms of Service</p>
+    </div>
+    <div class="col">
+      <h4>Newsletter</h4>
+      <p>Stay updated with our latest courses and announcements</p>
+      <input type="email" placeholder="Enter your email">
+      <button>Subscribe</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

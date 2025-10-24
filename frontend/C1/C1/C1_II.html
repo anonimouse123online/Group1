@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSIT Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Alegreya+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_II.css">
+</head>
+<body>
+  <div class="dashboard-wrapper">
+    <header>
+      <img src="564144773_1159575345678496_8000091242905294948_n.png" alt="BSIT Logo" class="logo">
+      <nav>
+        <div class="nav-items">
+          <a href="#" class="active">Home</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+        </div>
+        <a href="#" class="logout">Log out</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="stats-header">
+        <h1>1,010 Total students enrolled</h1>
+        <img src="564144773_1159575345678496_8000091242905294948_n.png" alt="Secondary Logo" class="secondary-logo">
+      </section>
+
+      <section class="stats-cards">
+        <div class="card">
+          <h2>200</h2>
+          <hr class="card-line">
+          <p>New Students Enrolled</p>
+        </div>
+        <div class="card">
+          <h2>404</h2>
+          <hr class="card-line">
+          <p>Total Male Enrolled</p>
+        </div>
+        <div class="card">
+          <h2>606</h2>
+          <hr class="card-line">
+          <p>Total Female Enrolled</p>
+        </div>
+      </section>
+
+      <section class="charts-wrapper">
+        <div class="charts">
+          <div class="chart-container">
+            <div class="chart-label">
+              <h3>Enrolled Students by Year & Section and Gender</h3>
+            </div>
+            <div class="chart left-chart">
+              <div class="chart-placeholder bar-chart"></div>
+            </div>
+          </div>
+          <div class="chart-container">
+            <div class="chart-label">
+              <h3>Gender Distribution of Enrolled Students</h3>
+            </div>
+            <div class="chart right-chart">
+              <div class="chart-placeholder pie-chart"></div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </section>
+
+      <section class="student-list">
+        <div class="student-list-header">
+          <h3>Students List</h3>
+          <div class="filter">
+            <select>
+              <option value="">Select Year & Section to view</option>
+              <option value="3A">3A</option>
+              <option value="1A">1A</option>
+              <option value="1B">1B</option>
+              <option value="1C">1C</option>
+              <option value="2A">2A</option>
+              <option value="2B">2B</option>
+              <option value="3B">3B</option>
+              <option value="4A">4A</option>
+              <option value="4B">4B</option>
+            </select>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Year & Section</th>
+              <th>Email</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Nicoleden Francisco</td>
+              <td>3A</td>
+              <td>francisconicole068@gmail.com</td>
+              <td>Dalaguete, Cebu</td>
+            </tr>
+            <tr>
+              <td>Rona Mae Gesim</td>
+              <td>3A</td>
+              <td>runamigesim@gmail.com</td>
+              <td>Dalaguete, Cebu</td>
+            </tr>
+            <tr>
+              <td>Justine Shene Cariman</td>
+              <td>3A</td>
+              <td>carimanjustine10@gmail.com</td>
+              <td>Dalaguete, Cebu</td>
+            </tr>
+            <tr>
+              <td>Dominic Magalso</td>
+              <td>3A</td>
+              <td>nicmagalso17@gmail.com</td>
+              <td>Oslob, Cebu</td>
+            </tr>
+            <tr>
+              <td>Novin Durf Aguilar</td>
+              <td>3A</td>
+              <td>novindurf06@gmail.com</td>
+              <td>Sibonga, Cebu</td>
+            </tr>
+            <tr>
+              <td>Vexze Semilla</td>
+              <td>3A</td>
+              <td>goateehype@gmail.com</td>
+              <td>Argao, Cebu</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Bachelor of Science in Information Technology</h4>
+          <p>Empowering students worldwide with accessible quality education through innovative enrollment solutions.</p>
+          <div class="social-icons">
+            <span class="social-icon">🌐</span>
+            <span class="social-icon">📷</span>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <p>Help center &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Student Portal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Policy Privacy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Terms of Service</p>
+        </div>
+        <div class="footer-section">
+          <h4>News Letter</h4>
+          <p>Stay updated with our latest BSIT programs, tech innovations, and department announcements.</p>
+          <div class="newsletter">
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">2025 Bachelor of Science in Information Technology. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.png" />
+  <title>EDU ENROLL - Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="EDU ENROLL Logo">
+     
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/frontend/landingpage/index.html">Home</a></li>
+      <li><a href="/frontend/contactus/contactus.html">Contact us</a></li>
+      <li><a href="/frontend/profile/Ricaa/Myprofilee.html">Profile</a></li>
+      <li><a href="/frontend/settings/CorSettings.html" class="active">Settings</a></li>
+      <li class="mobile-login"><a href="login.html">Logout</a></li>
+    </ul>
+    <div class="login-btn desktop-login">
+      <a href="login.html">Logout</a>
+    </div>
+    <div class="hamburger" id="hamburger">☰</div>
+  </nav>
+
+  <div class="settings-container" role="main" aria-label="User Settings">
+    <div class="profile-customization" role="region" aria-labelledby="profile-customization">
+      <!-- New Profile Image -->
+       <div class="logo_icon">
+         <a href="#"><img src="logo.png" alt="BSIT"></a>
+      </div>
+      <img src="profile.png" alt="Profile" class="card-image">
+      <div class="settings-card-content" id="profile-customization">
+        <div class="settings-header">
+          <h2>Profile Customization</h2>
+          <div class="toggle-container"></div>
+        </div>
+        <p>Personalize your profile and learning experience</p>
+        <div class="options-row">
+          <div class="options-column">
+            <label class="DisplayName1" for="displayName">Display Name Format</label>
+            <div>
+              <input type="radio" id="fullName" name="displayName" value="full" checked aria-label="Full Name (Sai Zumin)">
+              <label for="fullName">Full Name (Sai Zumin)</label>
+            </div>
+            <div>
+              <input type="radio" id="firstName" name="displayName" value="first" aria-label="First Name Only (Sai)">
+              <label for="firstName">First Name Only (Sai)</label>
+            </div>
+            <label class="Language1" for="language">Language</label> 
+            <br>
+            <select id="language" aria-label="Select language">
+              <option value="en_US">English (US)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-card" role="region" aria-labelledby="account-security">
+      <img src="account.png" alt="Account Icon" class="card-image">
+      <div class="settings-card-content" id="account-security">
+        <h2>Account Security</h2>
+        <p>Protect your account with security settings</p>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="passwordChange">Password</label>
+            <p>Last updated 3 months ago</p>
+          </div>
+          <div class="button-container">
+            <button class="change-password-btn" id="passwordChange" aria-label="Change password">Change password</button>
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="twoFactor">Two-Factor Authentication</label>
+            <p>Add an extra layer of security to your account</p>
+          </div>
+          <div class="toggle-container">
+            <label class="toggle-switch" aria-labelledby="twoFactor">
+              <input type="checkbox" id="twoFactor">
+              <span class="slider" aria-hidden="true"></span>
+              <span class="visually-hidden">Toggle two-factor authentication</span>
+            </label>
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="loginNotifications">Login Notifications</label>
+            <p>Get notified when someone logs into your account</p>
+          </div>
+          <div class="toggle-container">
+            <label class="toggle-switch" aria-labelledby="loginNotifications">
+              <input type="checkbox" id="loginNotifications" checked>
+              <span class="slider" aria-hidden="true"></span>
+              <span class="visually-hidden">Toggle login notifications</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-card" role="region" aria-labelledby="notification-settings">
+      <img src="notification.png" alt="Notification Icon" class="card-image">
+      <div class="settings-card-content" id="notification-settings">
+        <h2>Notification Settings</h2>
+        <p>Customize your notification preferences</p>
+        <div>
+                   <div class="settings-item">
+            <div class="settings-text">
+              <label for="browserNotifications">Browser Notifications</label>
+              <p>Receive notifications in your browser</p>
+            </div>
+            <div class="toggle-container">
+              <label class="toggle-switch" aria-labelledby="browserNotifications">
+                <input type="checkbox" id="browserNotifications">
+                <span class="slider" aria-hidden="true"></span>
+                <span class="visually-hidden">Toggle browser notifications</span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-item">
+            <div class="settings-text">
+              <label for="mobileNotifications">Mobile App Notifications</label>
+              <p>Push notifications on mobile devices</p>
+            </div>
+            <div class="toggle-container">
+              <label class="toggle-switch" aria-labelledby="mobileNotifications">
+                <input type="checkbox" id="mobileNotifications" checked>
+                <span class="slider" aria-hidden="true"></span>
+                <span class="visually-hidden">Toggle mobile notifications</span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-item">
+            <div class="settings-text">
+              <label for="soundNotifications">Sound Notifications</label>
+              <p>Play sound for important notifications</p>
+            </div>
+            <div class="toggle-container">
+              <label class="toggle-switch" aria-labelledby="soundNotifications">
+                <input type="checkbox" id="soundNotifications" checked>
+                <span class="slider" aria-hidden="true"></span>
+                <span class="visually-hidden">Toggle sound notifications</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="notificationFrequency">Notifications Frequency</label>
+            <p>Control how often you receive notifications</p>
+          </div>
+          <div class="toggle-container">
+            <label class="toggle-switch" aria-labelledby="notificationFrequency">
+              <input type="checkbox" id="notificationFrequency" checked>
+              <span class="slider" aria-hidden="true"></span>
+              <span class="visually-hidden">Toggle notification frequency</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-card" role="region" aria-labelledby="email-preferences">
+      <img src="email.png" alt="Email Icon" class="card-image">
+      <div class="settings-card-content" id="email-preferences">
+        <h2>Email Preferences</h2>
+        <p>Control how we communicate with you</p>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="courseUpdates">Course Updates</label>
+            <p>Notifications about course announcements and updates</p>
+          </div>
+          <div class="toggle-container">
+            <label class="toggle-switch" aria-labelledby="courseUpdates">
+              <input type="checkbox" id="courseUpdates">
+              <span class="slider" aria-hidden="true"></span>
+              <span class="visually-hidden">Toggle course updates</span>
+            </label>
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="assignmentReminders">Assignment Reminders</label>
+            <p>Reminders about upcoming assignment deadlines</p>
+          </div>
+          <div class="toggle-container">
+            <label class="toggle-switch" aria-labelledby="assignmentReminders">
+              <input type="checkbox" id="assignmentReminders" checked>
+              <span class="slider" aria-hidden="true"></span>
+              <span class="visually-hidden">Toggle assignment reminders</span>
+            </label>
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="gradeNotifications">Grade Notifications</label>
+            <p>Notification when new grades are posted</p>
+          </div>
+          <div class="toggle-container">
+            <label class="toggle-switch" aria-labelledby="gradeNotifications">
+              <input type="checkbox" id="gradeNotifications" checked>
+              <span class="slider" aria-hidden="true"></span>
+              <span class="visually-hidden">Toggle grade notifications</span>
+            </label>
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="weeklyDigest">Weekly Digest</label>
+            <p>Summary of your weekly activity and progress</p>
+          </div>
+          <div class="toggle-container">
+            <label class="toggle-switch" aria-labelledby="weeklyDigest">
+              <input type="checkbox" id="weeklyDigest" checked>
+              <span class="slider" aria-hidden="true"></span>
+              <span class="visually-hidden">Toggle weekly digest</span>
+            </label>
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="marketingEmails">Marketing Emails</label>
+            <p>Promotional emails about new courses and features</p>
+          </div>
+          <div class="toggle-container">
+            <label class="toggle-switch" aria-labelledby="marketingEmails">
+              <input type="checkbox" id="marketingEmails" checked>
+              <span class="slider" aria-hidden="true"></span>
+              <span class="visually-hidden">Toggle marketing emails</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-card danger-zone" role="region" aria-labelledby="danger-zone">
+      <img src="danger.png" alt="Danger Icon" class="card-image">
+      <div class="settings-card-content" id="danger-zone">
+        <h2>Danger Zone</h2>
+        <p>Irreversible actions that affect your account</p>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="exportData">Export Account Data</label>
+            <p>Download a copy of all your data</p>
+          </div>
+          <div class="button-container">
+            <button id="exportData" aria-labelledby="exportData">Export Data</button>
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="deactivateAccount">Deactivate Account</label>
+            <p>Temporarily disable your account</p>
+          </div>
+          <div class="button-container">
+            <button id="deactivateAccount" aria-labelledby="deactivateAccount">Deactivate</button>
+          </div>
+        </div>
+        <div class="settings-item">
+          <div class="settings-text">
+            <label for="deleteAccount">Delete Account</label>
+            <p>Permanently delete your account and data</p>
+          </div>
+          <div class="button-container">
+            <button id="deleteAccount" aria-labelledby="deleteAccount">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="col">
+      <h4>Bachelor of Science in 
+Information Technology</h4>
+      <p class="cols">Empowering students worldwide<br>with accessible quality education<br>through innovative enrollment<br>solutions.</p>
+      <div class="social-icons">
+        <a href="#"><img src="fb.png" alt="Facebook"></a>
+        <a href="#"><img src="insta.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <div class="colv">
+      <h4>Support</h4>
+      <a href="#">Help center</a>
+      <a href="#">Student Portal</a>
+      <a href="#">Policy Privacy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <div class="col">
+      <h4>Newsletter</h4>
+      <p>Stay updated with our latest BSIT <br>programs, tech innovations, and <br>department announcements.</p>
+      <input type="email" placeholder="Enter your email">
+      <button>Subscribe</button>
+    </div>
+  </footer>
+  <p class="footer-bottom">
+    2025 Bachelor of Science in Information Technology. All rights  reserved.  
+  </p>
+
+  <script src="script.js"></script>
+  <script>
+    // Hamburger Menu
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    hamburger.addEventListener("click", () => {
+      const expanded = navLinks.classList.toggle("show");
+      hamburger.setAttribute("aria-expanded", expanded);
+    });
+
+    document.addEventListener("click", e => {
+      if (window.innerWidth <= 768 &&
+          navLinks.classList.contains("show") &&
+          !navLinks.contains(e.target) &&
+          !hamburger.contains(e.target)) {
+        navLinks.classList.remove("show");
+        hamburger.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // Load saved settings
+    function loadSettings() {
+      const settings = JSON.parse(localStorage.getItem("userSettings")) || {};
+      document.getElementById("twoFactor").checked = settings.twoFactor || false;
+      document.getElementById("loginNotifications").checked = settings.loginNotifications || true;
+      document.getElementById("browserNotifications").checked = settings.browserNotifications || false;
+      document.getElementById("mobileNotifications").checked = settings.mobileNotifications || true;
+      document.getElementById("soundNotifications").checked = settings.soundNotifications || true;
+      document.getElementById("notificationFrequency").checked = settings.notificationFrequency || true;
+      document.getElementById("courseUpdates").checked = settings.courseUpdates || false;
+      document.getElementById("assignmentReminders").checked = settings.assignmentReminders || true;
+      document.getElementById("gradeNotifications").checked = settings.gradeNotifications || true;
+      document.getElementById("weeklyDigest").checked = settings.weeklyDigest || true;
+      document.getElementById("marketingEmails").checked = settings.marketingEmails || true;
+      document.getElementById("fullName").checked = settings.displayName === "full";
+      document.getElementById("firstName").checked = settings.displayName === "first" || !settings.displayName;
+      document.getElementById("lightTheme").checked = settings.theme === "light" || !settings.theme;
+      document.getElementById("darkTheme").checked = settings.theme === "dark";
+      document.getElementById("autoTheme").checked = settings.theme === "auto";
+      document.getElementById("grid").checked = settings.layout === "grid";
+      document.getElementById("list").checked = settings.layout === "list" || !settings.layout;
+      document.getElementById("compact").checked = settings.layout === "compact";
+      document.getElementById("timeZone").value = settings.timeZone || "PST";
+      document.getElementById("language").value = settings.language || "en_US";
+    }
+
+    // Save settings
+    function saveSettings() {
+      const settings = {
+        twoFactor: document.getElementById("twoFactor").checked,
+        loginNotifications: document.getElementById("loginNotifications").checked,
+        browserNotifications: document.getElementById("browserNotifications").checked,
+        mobileNotifications: document.getElementById("mobileNotifications").checked,
+        soundNotifications: document.getElementById("soundNotifications").checked,
+        notificationFrequency: document.getElementById("notificationFrequency").checked,
+        courseUpdates: document.getElementById("courseUpdates").checked,
+        assignmentReminders: document.getElementById("assignmentReminders").checked,
+        gradeNotifications: document.getElementById("gradeNotifications").checked,
+        weeklyDigest: document.getElementById("weeklyDigest").checked,
+        marketingEmails: document.getElementById("marketingEmails").checked,
+        displayName: document.querySelector("input[name='displayName']:checked") ? document.querySelector("input[name='displayName']:checked").value : "full",
+        theme: document.querySelector("input[name='theme']:checked") ? document.querySelector("input[name='theme']:checked").value : "light",
+        layout: document.querySelector("input[name='layout']:checked") ? document.querySelector("input[name='layout']:checked").value : "list",
+        timeZone: document.getElementById("timeZone").value,
+        language: document.getElementById("language").value
+      };
+      localStorage.setItem("userSettings", JSON.stringify(settings));
+    }
+
+    // Event listeners for settings changes
+    document.querySelectorAll("input[type='checkbox'], input[type='radio'], select").forEach(element => {
+      element.addEventListener("change", saveSettings);
+    });
+
+    // Password change alert (placeholder)
+    document.getElementById("passwordChange").addEventListener("click", () => {
+      alert("Password change functionality is not implemented yet. Please contact support.");
+    });
+
+    // Danger zone alerts (placeholder)
+    document.getElementById("exportData").addEventListener("click", () => {
+      alert("Export data functionality is not implemented yet. Please contact support.");
+    });
+    document.getElementById("deactivateAccount").addEventListener("click", () => {
+      if (confirm("Are you sure you want to deactivate your account? This action can be reversed.")) {
+        alert("Deactivation process started. Please contact support to complete.");
+      }
+    });
+    document.getElementById("deleteAccount").addEventListener("click", () => {
+      if (confirm("Are you sure you want to permanently delete your account? This action is irreversible.")) {
+        alert("Deletion process started. Please contact support to complete.");
+      }
+    });
+
+    // Load settings on page load
+    window.addEventListener("load", loadSettings);
+  </script>
+</body>
+</html>
